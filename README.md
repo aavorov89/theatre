@@ -1,4 +1,4 @@
-We make a site for a small, provincial theater. The city N, where the theater is small, does not have a lot of public, so the performances are held strictly once a day, at 19:00.
+We make a site for a small, provincial theater. The city N, where the theater is, does not have a lot of public, so the performances are held strictly once a day, at 19:00.
 
 First of all, we have to implement a poster. We have a theater administrator, Mrs. Turner, a respected woman. She will make a schedule of performances.
 
