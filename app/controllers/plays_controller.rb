@@ -1,18 +1,21 @@
+# frozen_string_literal: true
+
+# controller to deal with plays
 class PlaysController < ApplicationController
   include Trailblazer::Rails::Controller
 
   def index
     run Play::Index
-    render json: Play::Decorator.for_collection.new(result[:model]).to_json
+    render json: serialize(result, for_collection: true)
   end
 
   def create
     run Play::Create
 
     if result.success?
-      render json: Play::Decorator.new(result[:model]).to_json, status: :created
+      render json: serialize(result), status: :created
     else
-      render json: result[:errors], status: :unprocessable_entity
+      render_error(result)
     end
   end
 

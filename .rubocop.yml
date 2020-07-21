@@ -1,0 +1,23 @@
+require: rubocop-rails
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 25
+  Exclude:
+    - 'db/migrate/*.rb'
+    - 'spec/**/*_spec.rb'
+    - 'spec/factories/*.rb'
+
+Style/SignalException:
+  Exclude:
+    - 'app/operations/**/*.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Lint/UnreachableCode:
+  Exclude:
+    - 'app/operations/**/*.rb'

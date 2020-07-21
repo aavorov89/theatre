@@ -1,4 +1,7 @@
-class Play::Decorator < Representable::Decorator
+# frozen_string_literal: true
+
+# serializer for play
+class PlaySerializer < ApplicationSerializer
   include Representable::JSON
 
   property :id
